@@ -1,0 +1,5 @@
+---
+const {tagText, color} = Astro.props;
+---
+
+{color == "green" ? <span class={`text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full border dark:border-green-500 dark:text-green-500`}>{tagText}</span> : <span class={`text-yellow-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full border dark:border-yellow-400 dark:text-yellow-400`}>{tagText}</span>}

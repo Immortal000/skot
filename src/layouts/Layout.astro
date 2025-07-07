@@ -1,0 +1,28 @@
+---
+import "./src/styles/global.css";
+import CenterContainer from "../components/CenterContainer.astro";
+
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>Siddarth Kotthur</title>
+	</head>
+	<body class="bg-neutral-900 text-white">
+		<slot/>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

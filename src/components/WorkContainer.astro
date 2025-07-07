@@ -1,0 +1,31 @@
+---
+const {title, description, startDate, endDate, company, tags, logo} = Astro.props;
+
+import Tag from "./Tag.astro";
+---
+<div class="relative pb-4 border-b border-neutral-800 mt-5">
+    <div class="flex items-start justify-between cursor-pointer">
+        <div class="flex items-center gap-4 flex-1">
+            <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center border shadow-md bg-black border-neutral-900">
+                <img src={logo} class="w-4/5 h-4/5" alt={company} />
+            </div>
+            <div class="flex-1">
+                <div class="flex items-center gap-3 mb-1">
+                    <h3 class="font-medium text-sm">{title}</h3>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xs text-neutral-300">{company}</span>
+                    <span class="text-xs text-neutral-500">•</span>
+                    <span class="text-xs text-neutral-500">{startDate} - {endDate}</span>
+                </div>
+
+                <div class="flex items-center gap-2 mt-2">
+                    {tags.map((tag: string) => (
+                        <Tag tagText={tag} color="green" />
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="overflow-hidden text-neutral-400 text-sm leading-relaxed mt-2" style="height: auto; opacity: 1;">{description}</p>
+</div>
