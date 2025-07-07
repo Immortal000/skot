@@ -13,6 +13,11 @@ export default defineConfig({
 
   adapter: vercel({
     imageService: true,
-    includeFiles: ["./src/assets/resume.pdf"],
+    includeFiles: [
+      "./src/assets/resume.pdf",
+      "./src/assets/paycom.png",
+      "./src/assets/advanta.png",
+      "./src/assets/terminal.svg",
+    ],
   }),
 });
