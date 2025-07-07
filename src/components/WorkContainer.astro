@@ -1,6 +1,6 @@
 ---
 const {title, description, startDate, endDate, company, tags, logo} = Astro.props;
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 
 import Tag from "./Tag.astro";
 ---
@@ -8,7 +8,7 @@ import Tag from "./Tag.astro";
     <div class="flex items-start justify-between cursor-pointer">
         <div class="flex items-center gap-4 flex-1">
             <div class="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center border shadow-md bg-black border-neutral-900">
-                <Image src={logo} alt={company} width={32} height={32} />
+                <Image src={logo} alt="Your Image Description" width={30} height={30}/>
             </div>
             <div class="flex-1">
                 <div class="flex items-center gap-3 mb-1">
