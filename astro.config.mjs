@@ -18,6 +18,7 @@ export default defineConfig({
       "./src/assets/paycom.png",
       "./src/assets/advanta.png",
       "./src/assets/terminal.svg",
+      "./src/assets/global.css",
     ],
   }),
 });
